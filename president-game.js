@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#part2").hide();
+    $("#part1").hide();
     $("#part2").hide();
     var presidents = [
 	['George Washington', 'http://upload.wikimedia.org/wikipedia/commons/1/12/Gilbert_Stuart%2C_George_Washington_%28Lansdowne_portrait%2C_1796%29.jpg'],
@@ -46,11 +46,19 @@ $(document).ready(function(){
 	['George W. Bush','http://upload.wikimedia.org/wikipedia/commons/d/d4/George-W-Bush.jpeg'],
 	['Barack Obama','http://upload.wikimedia.org/wikipedia/commons/e/e9/Official_portrait_of_Barack_Obama.jpg']
     ];
+    var startCountdown = function(){ 
+	setTimeout(function(){$('#part2').fadeIn();},3000);
+    }
     var startGame = function(){
+	$('#welcome').fadeOut(function(){
+	    $('#part1').fadeIn();
+	});
 	president_number = Math.floor(Math.random() * 43);
 	console.log(presidents[president_number][0]);
-	$("#pic").html("<img src='" + presidents[president_number][1] + "'>");
+	$('#pic').html("<img src='" + presidents[president_number][1] + "'>");
+
     }
+
     $('#start').click(function () {
 	startGame();
     });
