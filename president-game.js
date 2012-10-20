@@ -44,4 +44,9 @@ $(document).ready(function(){
 	['George W. Bush','http://upload.wikimedia.org/wikipedia/commons/d/d4/George-W-Bush.jpeg'],
 	['Barack Obama','http://upload.wikimedia.org/wikipedia/commons/e/e9/Official_portrait_of_Barack_Obama.jpg']
     ];
+
+
+    $('#start').click(function () {
+	startGame();
+    });
 });
