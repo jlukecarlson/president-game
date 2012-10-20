@@ -23,7 +23,7 @@ ul, li {
 }
 
 #container {
-	background-image: url(images/subtle_surface.png);
+	background-image: url(images/swirl.png);
 	-moz-border-radius: 15px;
 	border-radius: 15px;
 	width: 75%;
@@ -34,4 +34,8 @@ ul, li {
 #welcome {
 	margin: auto;
 	width: 80%;
+}
+
+#pic {
+	width: 75%;
 }
