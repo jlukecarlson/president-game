@@ -6,4 +6,7 @@ body {
 	background-image: url(images/subtle_surface.png);
 	-moz-border-radius: 15px;
 	border-radius: 15px;
+	width: 75%;
+	height: 75%;
+	margin: auto;
 }
