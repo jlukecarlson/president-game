@@ -1,0 +1,9 @@
+body {
+	background-image: url(images/navy_blue.png); 
+}
+
+#container {
+	background-image: url(images/subtle_surface.png);
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
