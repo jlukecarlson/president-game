@@ -45,7 +45,9 @@ $(document).ready(function(){
 	['Barack Obama','http://upload.wikimedia.org/wikipedia/commons/e/e9/Official_portrait_of_Barack_Obama.jpg']
     ];
 
-
+    var startGame = function(){
+	president_number = Math.floor(Math.random() * 44)
+    }
     $('#start').click(function () {
 	startGame();
     });
