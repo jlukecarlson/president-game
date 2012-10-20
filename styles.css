@@ -36,6 +36,7 @@ ul, li {
 	width: 80%;
 }
 
-#pic {
-	width: 75%;
+#pic img{
+	max-width: 100%;
+	height: auto;
 }
