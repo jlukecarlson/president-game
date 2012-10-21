@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $("#part1").hide();
     $("#part2").hide();
+    console.log(Math.floor(Math.random() * 3 + 1))
     var correct_president = "no one";
     var presidents = [
 	['George Washington', 'http://upload.wikimedia.org/wikipedia/commons/1/12/Gilbert_Stuart%2C_George_Washington_%28Lansdowne_portrait%2C_1796%29.jpg'],
@@ -49,42 +50,17 @@ $(document).ready(function(){
     ];
     var chooseOption = function(correct_president_number){ 
 	console.log('questions');
-	correct_option = Math.floor(Math.random() * 3);
-	$("#option" + correct_option).html(presidents[president_number][0]);
+	var correct_option = Math.floor(Math.random() * 4);
+	console.log(correct_option);
+	$("#option" + correct_option).html(presidents[correct_president_number][0]);
 	for (var i=1; i<5; i++){
-	    president_option = Math.floor(Math.random() * 43);
+	    var president_option = Math.floor(Math.random() * 43);
 	    console.log("option is" + president_option);
-	    if(president_option != correct_president_number){
-		if(i != correct_option){
-		    $("#option" + i).html(presidents[president_option][0]);	
-		}
-	    }
-	}
-	$('#part2').fadeIn();
-	//setTimeout(function(){$('#part2').fadeIn();},3000);
-    }
-    var startGame = function(){
-	$('#welcome').fadeOut(function(){
-	    $('#part1').fadeIn();
-	});
-	president_number = Math.floor(Math.random() * 43);
-	console.log(presidents[president_number][0]);
-	correct_president = presidents[president_number][0];
-	$('#pic').html("<img id='president_pic' src='" + presidents[president_number][1] + "'>");
-	$('#president_pic').load(function() {
-	    console.log('loaded');
-	    setTimeout(function(){$('#part1').fadeOut(chooseOption(president_number))},3000);
-	});
-    }
-
+	    if(president_option !== correct_president_number){
+		if(i !== correct_option){
+		    
     $('#start').click(function () {
 	startGame();
     });
-    $('.choice').click(function(){
-	if($('.choice').text() = correct_president){
-	    $('#answer').html('correct');
-	} else {
-	     $('#answer').html('wrong');
-	}
-    });
+   
 });
