@@ -85,7 +85,7 @@ $(document).ready(function(){
 	//setTimeout(function(){$('#part2').fadeIn();},3000);
     }
     var startGame = function(){
-	$('#title').hide();
+	$('#titlepic').hide();
 	$('#part2').hide();
 	total_rounds += 1;
 	$('#welcome').fadeOut(function(){
