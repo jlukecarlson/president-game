@@ -1,12 +1,12 @@
 <!Doctype HTML>
 <html>
   <head>
-    <title>President Game</title>
+    <title>Who's that President?</title>
 
     <meta name="author" content="Luke, Ryan and Facundo">
     <meta name="description" content="President Game">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="/static/styles.css"/>
+    <link rel="stylesheet" href="styles.css"/>
     <script src="/static/jquery-1.8.2.mins.js"></script>
     <script src="/static/president-game.js"></script>
   </head>
@@ -15,43 +15,43 @@
   <body>
     <div id="container">
       <!-- Welcome Page -->
-      <h1>The President Game</h1>
+      <img src="/static/images/title.png" alt="who's that president?" id="title">
       <p> Score: <em id="score"></em></p>
       <div id="welcome">
 
-	<p>You have three seconds to look at a picture of a president of the United States and then you have to figure out which president was depicted. This is a game that can be played on any mobile device. Click the start button to begin.</p>
+  <p>You have three seconds to look at a picture of a president of the United States and then you have to figure out which president was depicted. This is a game that can be played on any mobile device. Click the start button to begin.</p>
 
-	<p id="start" class="button orange">Start</p>
-	
+  <p id="start" class="button orange">Start</p>
+  
       </div>
 
       <!-- Game Picture -->
       <div id="part1">
-	<div id="pic"> </div>
-	<div id="countdown"></div>
+  <div id="pic"> </div>
+  <div id="countdown"></div>
       </div>
 
       <!-- Game Options -->
       <div id="part2">
-	
-	<span>Which President was just shown?</span>
-	<ul>
-	  <li><p id="option1" class="choice button orange"></p></li>
-	  <li><p id="option2" class="choice button orange"></p></li>
-	  <li><p id="option3" class="choice button orange"></p></li>
-	  <li><p id="option4" class="choice button orange"></p></li>
-	</ul>
-	<div id="answer"></div>
+  
+  <span>Which President was just shown?</span>
+    <li><p id="option1" class="choice button orange"></p></li>
+    <li><p id="option2" class="choice button orange"></p></li>
+    <li><p id="option3" class="choice button orange"></p></li>
+    <li><p id="option4" class="choice button orange"></p></li>
+  <div id="answer"></div>
       </div>
-    </div>
+    
 
   </body>
 
 
 
   <footer>
-    <p style="font-size:12px;">Ballers: | Ryan | Facundo | Luke | </p>
+    <p style="font-size:12px;">Ballers: <a href="www.ryanstecher.net">| Ryan </a><a href="https://github.com/FacundoM">| Facundo </a><a href="http://www.jlukecarlson.com/">| Luke |</a> </p>
   </footer>
+
+  </div>
 </html>
 
 
