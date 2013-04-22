@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $("#part1").hide();
     $("#part2").hide();
-    console.log(Math.floor(Math.random() * 3 + 1))
+    //console.log(Math.floor(Math.random() * 3 + 1))
     var total_rounds = 0;
     var correct_rounds = 0;
     var correct_president = "no one";
@@ -51,9 +51,9 @@ $(document).ready(function(){
 	['Barack Obama','http://upload.wikimedia.org/wikipedia/commons/e/e9/Official_portrait_of_Barack_Obama.jpg']
     ];
     var chooseOption = function(correct_president_number){ 
-	console.log('questions');
+	//console.log('questions');
 	var correct_option = Math.floor(Math.random() * 3 + 1);
-	console.log(correct_option);
+	//console.log(correct_option);
 	$("#option" + correct_option).html(presidents[correct_president_number][0]);
 	for (var i=1; i<5; i++){
 //	    if(i = correct_option) {
@@ -61,9 +61,9 @@ $(document).ready(function(){
 //	    }// else {
 //		$("option" + i).html(presidents[Math.floor(Math.random() * 43)][0];
 	    
-	    console.log(i);
+	    //console.log(i);
 	    var president_option = Math.floor(Math.random() * 43);
-	    console.log("option is" + president_option);
+	    //console.log("option is" + president_option);
 	    if(president_option != correct_president_number){
 		if(i != correct_option){
 		    $("#option" + i).html(presidents[president_option][0]);
@@ -92,11 +92,11 @@ $(document).ready(function(){
 	    $('#part1').fadeIn();
 	});
 	president_number = Math.floor(Math.random() * 43);
-	console.log(presidents[president_number][0]);
+	//console.log(presidents[president_number][0]);
 	correct_president = presidents[president_number][0];
 	$('#pic').html("<img id='president_pic' src='" + presidents[president_number][1] + "'>");
 	$('#president_pic').load(function() {
-	    console.log('loaded');
+	    //console.log('loaded');
 	    setTimeout(function(){$('#part1').fadeOut(chooseOption(president_number))},3000);
 	});
     }
@@ -106,12 +106,12 @@ $(document).ready(function(){
     });
     $('.choice').click(function () {
 	if($(this).text() == correct_president){
-	    console.log('correct!');
+	    //console.log('correct!');
 	    correct_rounds += 1;
 	    $("#score").html(correct_rounds + " out of " + total_rounds);
 	    startGame();
 	} else {
-	    console.log('wrong');
+	    //console.log('wrong');
 	    $("#score").html(correct_rounds + " out of " + total_rounds);
 	    startGame();
 	}
